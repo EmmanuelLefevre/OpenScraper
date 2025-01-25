@@ -37,7 +37,7 @@ pip list
 ```
 3. Lancer l'application python
 ```bash
-python app.py
+python app/app.py
 ```
 
 ## TO DO
