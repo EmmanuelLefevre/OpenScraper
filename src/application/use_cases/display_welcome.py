@@ -1,4 +1,4 @@
-from app.functions.welcome_message import WelcomeMessage
+from src.application.services.welcome_message import WelcomeMessage
 
 class DisplayWelcome:
   @staticmethod
