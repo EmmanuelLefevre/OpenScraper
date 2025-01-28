@@ -1,4 +1,4 @@
-from app.use_cases.display_welcome import DisplayWelcome
+from src.application.use_cases.display_welcome import DisplayWelcome
 
 def main():
   try:
