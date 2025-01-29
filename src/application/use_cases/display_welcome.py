@@ -1,6 +1,6 @@
-from src.application.services.welcome_message import WelcomeMessage
+from src.application.services.message_printer import MessagePrinter
 
 class DisplayWelcome:
   @staticmethod
   def execute():
-    WelcomeMessage.print_welcome_message()
+    MessagePrinter.print_welcome_message()
