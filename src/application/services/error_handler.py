@@ -1,6 +1,7 @@
 import logging
 import os
-from src.application.services.message_printer import MessagePrinter
+
+from src.application.use_cases.display_error import DisplayError
 
 class ErrorHandler:
   LOG_DIR = "logs"
@@ -34,13 +35,5 @@ class ErrorHandler:
   @staticmethod
   def handle(message: str, log: bool = True):
     if log:
-      ErrorHandler.logger.error(message)  # Enregistre dans logs/app.log + console
-    MessagePrinter.print_error(message)  # Affiche l'erreur à l'utilisateur
-
-
-class ErrorHandler:
-  @staticmethod
-  def handle(message: str, log: bool = True):
-    if log:
-      logging.error(message)
-    MessagePrinter.print_error(message)
+      ErrorHandler.logger.error(message)
+    DisplayError.execute(message)
