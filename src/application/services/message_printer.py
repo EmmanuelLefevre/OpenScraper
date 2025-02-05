@@ -2,6 +2,10 @@ from colorama import Fore, Style
 
 class MessagePrinter:
   @staticmethod
+  def print_message(message: str):
+    print(f"{Style.BRIGHT}{Fore.BLUE}{message}{Style.RESET_ALL}")
+
+  @staticmethod
   def print_success(message: str):
     print(f"{Style.BRIGHT}{Fore.GREEN}✅ {message}{Style.RESET_ALL}")
 
@@ -25,11 +29,3 @@ class MessagePrinter:
   def ask_user_confirmation(message: str, default: bool = True):
     options = "(O/n)" if default else "(o/N)"
     print(f"💬 {message} {options} : ", end="")
-
-  @staticmethod
-  def print_welcome_message():
-    print(f"{Style.BRIGHT}{Fore.BLUE}Bienvenue dans OpenScraper 🎣{Style.RESET_ALL}")
-
-  @staticmethod
-  def print_goodbye_message():
-    print(f"{Style.BRIGHT}{Fore.BLUE}👋 Programme terminé.{Style.RESET_ALL}")
