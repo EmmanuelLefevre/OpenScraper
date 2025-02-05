@@ -1,5 +1,6 @@
 import requests
-from src.application.services.message_printer import MessagePrinter
+
+from src.application.use_cases.display_error import DisplayError
 
 class ApiClient:
   def get_data(url: str) -> dict:
@@ -9,6 +10,4 @@ class ApiClient:
       return response.json()
 
     except requests.exceptions.RequestException as e:
-      MessagePrinter.print_error(str(e))
-      MessagePrinter.print_error("Erreur API : {e}")
-      raise RuntimeError(f"Erreur lors de la récupération des données depuis l'API : {e}")
+      DisplayError.execute(str(e))
