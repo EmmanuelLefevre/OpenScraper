@@ -1,3 +1,4 @@
+from src.application.use_cases.ask_url import AskUrl
 from src.application.use_cases.display_error import DisplayError
 from src.application.use_cases.display_goodbye import DisplayGoodbye
 from src.application.use_cases.display_leave import DisplayLeave
@@ -6,6 +7,7 @@ from src.application.use_cases.display_welcome import DisplayWelcome
 def main():
   try:
     DisplayWelcome.execute()
+    url = AskUrl.execute()
     DisplayGoodbye.execute()
 
   except Exception as e:
