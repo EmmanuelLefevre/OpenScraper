@@ -22,6 +22,10 @@ class MessagePrinter:
     print(f"{Style.BRIGHT}{Fore.RED}💥 {message}{Style.RESET_ALL}")
 
   @staticmethod
+  def print_exception(message: str):
+    print(f"{Style.BRIGHT}{Fore.RED}💣 {message}{Style.RESET_ALL}")
+
+  @staticmethod
   def ask_user_input(message: str) -> str:
     return input(f"{message} ('fin' pour quitter) : ")
 
