@@ -28,6 +28,7 @@ class AppController:
     except Exception as e:
       DisplayException.execute(str(e))
 
+
   @staticmethod
   def handle_exit():
     DisplayLeave.execute()
