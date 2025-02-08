@@ -6,7 +6,7 @@
 - [REQUIREMENTS](#-requirements)
 - [ARCHITECTURE](#-architecture)
 - [GETTING STARTED](#-getting-started)
-- [TO DO](#to-do)
+- [TO DO](#-to-do)
 
 ## 👋 INTRODUCTION
 OpenScraper est un outil pratique et flexible conçu pour automatiser la récupération de données provenant d’API ouvertes. Que vous souhaitiez collecter des informations sous forme de fichiers CSV ou JSON, OpenScraper simplifie le processus en offrant une solution polyvalente et accessible, quelle que soit la complexité ou le format de l’API.  
@@ -93,7 +93,7 @@ Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -
 ```
 
 ## ✒️ TO DO
-- 
+- A faire ...
 
 ***
 
