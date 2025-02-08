@@ -39,6 +39,10 @@ pip list
 ```bash
 python -m src.app
 ```
+4. Effacer les fichiers de cache
+```bash
+Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
+```
 
 ## TO DO
 - 
