@@ -1,5 +1,6 @@
 from src.application.controllers.app_controller import AppController
 
+
 def main():
   AppController.run()
 
