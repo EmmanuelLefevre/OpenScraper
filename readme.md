@@ -93,7 +93,7 @@ Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -
 ```
 
 ## ✒️ TO DO
-- A faire ...
+- A faire...
 
 ***
 
