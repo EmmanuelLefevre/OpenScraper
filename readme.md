@@ -37,15 +37,15 @@ pip list
 ```
 3. Lancer l'application python
 ```bash
-python -m src.app
+python -m app
 ```
 Sans fichiers de compilation
 ```bash
-python -B -m src.app
+python -B -m app
 ```
 Supprression des fichiers de compilation à la fin de l'éxécution du programme
 ```bash
-python -m src.app; Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
+python -m app; Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
 ```
 4. Effacer les fichiers de compilation
 ```bash
