@@ -15,7 +15,8 @@ Dans un monde où les données sont essentielles, les API ouvertes permettent d�
 Cependant, la gestion de ces API peut parfois devenir fastidieuse, notamment lorsque :  
 - Les formats de réponse varient (JSON, XML ...)
 - Les authentifications ou clés API sont nécessaires
-- Une grande quantité de données doit être récupérée et exportée  
+- Une grande quantité de données doit être récupérée et exportée
+- Plusieurs pages de résultats doivent être parcourues pour obtenir toutes les informations  
 
 Avec OpenScraper, l’accès aux données ouvertes devient simple, rapide et entièrement automatisé. Que vous soyez développeur ou analyste de données, cet outil vous permettra d’exploiter le plein potentiel des API ouvertes sans effort supplémentaire.
 
