@@ -39,7 +39,15 @@ pip list
 ```bash
 python -m src.app
 ```
-4. Effacer les fichiers de cache
+Sans fichiers de compilation
+```bash
+python -B -m src.app
+```
+Supprression des fichiers de compilation à la fin de l'éxécution du programme
+```bash
+python -m src.app; Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
+```
+4. Effacer les fichiers de compilation
 ```bash
 Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
 ```
