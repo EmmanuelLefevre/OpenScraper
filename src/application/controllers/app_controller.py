@@ -1,3 +1,4 @@
+from src.application.exceptions.user_exit_exception import UserExitException
 from src.application.use_cases.ask_url import AskUrl
 from src.application.use_cases.display_exception import DisplayException
 from src.application.use_cases.display_goodbye import DisplayGoodbye
@@ -20,6 +21,9 @@ class AppController:
       data = retrieve_data.execute(url)
       print(data)
       DisplayGoodbye.execute()
+
+    except UserExitException:
+      DisplayLeave.execute()
 
     except Exception as e:
       DisplayException.execute(str(e))
