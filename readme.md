@@ -4,6 +4,7 @@
 - [INTRODUCTION](#introduction)
 - [PYTHON](#python)
 - [REQUIREMENTS](#requirements)
+- [ARBORESCENCE](#arborescence)
 - [GETTING STARTED](#getting-started)
 - [TO DO](#to-do)
 
@@ -25,6 +26,43 @@ Avec OpenScraper, l’accès aux données ouvertes devient simple, rapide et ent
 - Colorama
 - Pyarrow
 - Requests
+
+## ARBORESCENCE
+```bash
+├── src/
+│   ├── controllers/
+│   │   ├── app_controller.py
+│   ├── application/
+│   │   ├── dtos/
+│   │   ├── exceptions/
+│   │   │   ├── user_exit_exception.py
+│   │   ├── services/
+│   │   │   ├── message_printer.py
+│   │   │   ├── user_input_handler.py
+│   │   ├── uses_cases/
+│   │   │   ├── ask_url.py
+│   │   │   ├── display_error.py
+│   │   │   ├── display_exception.py
+│   │   │   ├── display_goodbye.py
+│   │   │   ├── display_leave.py
+│   │   │   ├── display_success.py
+│   │   │   ├── display_warning.py
+│   │   │   ├── display_welcome.py
+│   │   │   ├── file_dialog.py
+│   │   │   ├── retrieve_data.py
+│   ├── domain/
+│   │   ├── models/
+│   │   └── services/
+│   ├── infrastructure/
+│   │   └── external_services/
+│   │   │   ├── api_client.py
+│   │   └── storage/
+│   │   │   ├── save_file.py
+├── app.py
+├── requirements.txt
+├── readme.md
+├── .gitignore
+```
 
 ## GETTING STARTED
 1. Installer les librairies (en local dans python)
