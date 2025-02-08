@@ -2,6 +2,7 @@ import requests
 
 from src.application.use_cases.display_exception import DisplayException
 
+
 class ApiClient:
   def get_data(url: str) -> dict:
     try:
