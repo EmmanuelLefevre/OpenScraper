@@ -1,5 +1,6 @@
 from colorama import Fore, Style
 
+
 class MessagePrinter:
   @staticmethod
   def print_message(message: str):
