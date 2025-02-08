@@ -6,6 +6,7 @@ from src.application.use_cases.retrieve_data import RetrieveData
 from src.application.use_cases.display_welcome import DisplayWelcome
 from src.infrastructure.external_services.api_client import ApiClient
 
+
 class AppController:
   @staticmethod
   def run():
