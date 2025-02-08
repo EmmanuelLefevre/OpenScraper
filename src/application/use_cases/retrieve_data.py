@@ -4,12 +4,13 @@ from src.infrastructure.external_services.api_client import ApiClient
 
 
 class RetrieveData:
-  def __init__(self, api_client):
+  def __init__(self, api_client: ApiClient) -> None:
     self.api_client = api_client
 
-  def execute(self, url: str):
+
+  def execute(self, url: str) -> dict | None:
     try:
-      data = ApiClient.get_data(url)
+      data = self.api_client.get_data(url)
       DisplaySuccess.execute("Données récupérées...")
       return data
 
