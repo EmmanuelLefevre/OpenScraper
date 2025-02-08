@@ -1,8 +1,7 @@
-from src.application.services.message_printer import MessagePrinter
+from src.application.services.user_input_handler import UserInputHandler
 
 
 class AskUrl:
   @staticmethod
   def execute() -> str:
-    url = MessagePrinter.ask_user_input("🏁 Saisir une URL")
-    return url.strip()
+    return UserInputHandler.ask_input("🏁 Saisir une URL")
