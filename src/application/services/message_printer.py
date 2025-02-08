@@ -33,4 +33,4 @@ class MessagePrinter:
   @staticmethod
   def ask_user_confirmation(message: str, default: bool = True):
     options = "(O/n)" if default else "(o/N)"
-    print(f"💬 {message} {options} : ", end="")
+    return input (f"💬 {message} {options} : \n")
