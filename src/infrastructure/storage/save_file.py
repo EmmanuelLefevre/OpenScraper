@@ -14,11 +14,14 @@ from tkinter import filedialog
 
 class SaveFile:
   DATA_FOLDER = "data_frame"
+  STORAGE_DIR = os.path.join(os.getcwd(), "src", "infrastructure", "storage")
+
 
   @staticmethod
   def ensure_data_folder_exists() -> None:
-    if not os.path.exists(SaveFile.DATA_FOLDER):
-      os.makedirs(SaveFile.DATA_FOLDER)
+    data_frame_path = os.path.join(SaveFile.STORAGE_DIR, SaveFile.DATA_FOLDER)
+    if not os.path.exists(data_frame_path):
+      os.makedirs(data_frame_path)
 
 
   @staticmethod
@@ -31,7 +34,7 @@ class SaveFile:
 
       DisplayMessage.execute("📂 Sélectionner un emplacement pour sauvegarder le fichier.")
       file_path = filedialog.asksaveasfilename(
-        initialdir=SaveFile.DATA_FOLDER,
+        initialdir=os.path.join(SaveFile.STORAGE_DIR, SaveFile.DATA_FOLDER),
         initialfile=filename,
         defaultextension="",
         filetypes=[("JSON files", "*.json"), ("CSV files", "*.csv")]
