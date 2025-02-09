@@ -1,7 +1,6 @@
 import requests
 
-from src.application.use_cases.display_error import DisplayError
-from src.application.use_cases.display_exception import DisplayException
+from src.application.use_cases.display_message import DisplayMessage
 from src.domain.services.data_extractor import DataExtractor
 from src.domain.services.data_formatter import DataFormatter
 
@@ -22,9 +21,9 @@ class ApiClient:
         return response.text
 
       else:
-        DisplayError.execute("Format de données non pris en charge.")
+        DisplayMessage.error("Format de données non pris en charge.")
         return None
 
     except requests.exceptions.RequestException as e:
-      DisplayException.execute(str(e))
+      DisplayMessage.exception(str(e))
       return None

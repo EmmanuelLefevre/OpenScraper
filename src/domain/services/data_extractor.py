@@ -1,6 +1,6 @@
 import json
 
-from src.application.use_cases.display_exception import DisplayException
+from src.application.use_cases.display_message import DisplayMessage
 
 
 class DataExtractor:
@@ -12,5 +12,5 @@ class DataExtractor:
       return json.dumps(extracted_data, ensure_ascii=False, indent=2)
 
     except json.JSONDecodeError as e:
-      DisplayException.execute(str(e))
+      DisplayMessage.exception(str(e))
       return None
