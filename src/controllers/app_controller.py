@@ -20,8 +20,7 @@ class AppController:
       api_client = ApiClient()
       save_file = SaveFile()
       retrieve_data = RetrieveData(api_client, save_file)
-      data = retrieve_data.execute(url)
-      # print(data)
+      retrieve_data.execute(url)
 
       DisplayGoodbye.execute()
 
