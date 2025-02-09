@@ -22,7 +22,7 @@ Cependant, la gestion de ces API peut parfois devenir fastidieuse, notamment lor
 Avec OpenScraper, l’accès aux données ouvertes devient simple, rapide et entièrement automatisé. Que vous soyez développeur ou analyste de données, cet outil vous permettra d’exploiter le plein potentiel des API ouvertes sans effort supplémentaire.
 
 ## 💻 TECHNO
-- **Language**: Python 3.13.1
+- **Langage**: Python 3.13.1
 
 [Guide d'installation Python](https://github.com/EmmanuelLefevre/Documentations/blob/master/Tutorials/python_install.md)  
 
