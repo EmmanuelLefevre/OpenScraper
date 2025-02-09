@@ -1,6 +1,6 @@
 from src.application.exceptions.user_exit_exception import UserExitException
 from src.application.services.message_printer import MessagePrinter
-from src.application.use_cases.display_warning import DisplayWarning
+from src.application.use_cases.display_message import DisplayMessage
 
 
 class UserInputHandler:
@@ -16,4 +16,4 @@ class UserInputHandler:
       if user_input or allow_empty:
         return user_input
 
-      DisplayWarning.execute("La saisie ne peut être vide! Essayer à nouveau...")
+      DisplayMessage.warning("La saisie ne peut être vide! Essayer à nouveau...")

@@ -1,4 +1,4 @@
-from src.application.use_cases.display_error import DisplayError
+from src.application.use_cases.display_message import DisplayMessage
 from src.infrastructure.external_services.api_client import ApiClient
 from src.infrastructure.storage.save_file import SaveFile
 
@@ -17,5 +17,5 @@ class FetchData:
       return data
 
     except RuntimeError as e:
-      DisplayError.execute(str(e))
+      DisplayMessage.error(str(e))
       return None
