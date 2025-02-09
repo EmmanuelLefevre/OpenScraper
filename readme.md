@@ -6,6 +6,7 @@
 - [REQUIREMENTS](#-requirements)
 - [ARCHITECTURE](#-architecture)
 - [GETTING STARTED](#-getting-started)
+- [DATA DOWNLOADED](#-data-downloaded)
 - [TO DO](#-to-do)
 
 ## 👋 INTRODUCTION
@@ -100,6 +101,12 @@ python -m app; Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-
 4. Effacer les fichiers de compilation
 ```bash
 Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
+```
+
+## 🛒 DATA DOWNLOADED
+Les données JSON ou CSV sont stockées dans le dossier suivant de l'application =>
+```bash
+cd src\infrastructure\storage\data_frame
 ```
 
 ## 📝 TO DO
