@@ -32,12 +32,19 @@ class SaveFile:
       root = tk.Tk()
       root.withdraw()
 
+      if "{" in data:
+        filetypes = [("JSON files", "*.json")]
+        extension = ".json"
+      else:
+        filetypes = [("CSV files", "*.csv")]
+        extension = ".csv"
+
       DisplayMessage.execute("📂 Sélectionner un emplacement pour sauvegarder le fichier.")
       file_path = filedialog.asksaveasfilename(
         initialdir=os.path.join(SaveFile.STORAGE_DIR, SaveFile.DATA_FOLDER),
         initialfile=filename,
-        defaultextension="",
-        filetypes=[("JSON files", "*.json"), ("CSV files", "*.csv")]
+        defaultextension=extension,
+        filetypes=filetypes
       )
 
       if not file_path:
@@ -51,10 +58,23 @@ class SaveFile:
         extension = "json" if file_path.endswith(".json") else "csv"
 
       if extension == "json":
-        with open(file_path, "w", encoding="utf-8") as file:
-          json.dump(json.loads(data), file, ensure_ascii=False, indent=2)
-      else:
-        df = pd.read_csv(StringIO(data))
+        try:
+          json_data = json.loads(data)
+          with open(file_path, "w", encoding="utf-8") as file:
+            json.dump(json_data, file, ensure_ascii=False, indent=2)
+
+        except json.JSONDecodeError as e:
+          DisplayError.execute(f"Erreur de décodage JSON : {e}")
+          return
+
+      elif extension == "csv":
+        try:
+          df = pd.read_csv(StringIO(data))
+
+        except pd.errors.ParserError as e:
+          DisplayError.execute(f"Erreur de parsing CSV : {e}")
+          return
+
         df.to_csv(file_path, index=False, encoding="utf-8")
 
       folder_path, final_filename = os.path.split(file_path)
