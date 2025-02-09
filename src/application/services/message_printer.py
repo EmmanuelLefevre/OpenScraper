@@ -14,12 +14,12 @@ class MessagePrinter:
 
   @staticmethod
   def print_info(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.BLUE}ℹ  {message}{Style.RESET_ALL}")
+    print(f"{Style.BRIGHT}{Fore.MAGENTA}ℹ  {message}{Style.RESET_ALL}")
 
 
   @staticmethod
   def print_warning(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.MAGENTA}⚠️ {message}{Style.RESET_ALL}")
+    print(f"{Style.BRIGHT}{Fore.YELLOW}⚠️ {message}{Style.RESET_ALL}")
 
 
   @staticmethod
@@ -29,7 +29,7 @@ class MessagePrinter:
 
   @staticmethod
   def print_exception(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.RED}💣 {message}{Style.RESET_ALL}")
+    print(f"{Style.NORMAL}{Fore.RED}💣 {message}{Style.RESET_ALL}")
 
 
   @staticmethod
