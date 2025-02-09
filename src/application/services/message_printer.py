@@ -3,23 +3,14 @@ from colorama import Fore, Style
 
 class MessagePrinter:
   @staticmethod
-  def print_message(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.BLUE}{message}{Style.RESET_ALL}")
+  def ask_user_confirmation(message: str, default: bool = True) -> str:
+    options = "(O/n)" if default else "(o/N)"
+    return input (f"💬 {message} {options} : \n")
 
 
   @staticmethod
-  def print_success(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.GREEN}✅ {message}{Style.RESET_ALL}")
-
-
-  @staticmethod
-  def print_info(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.CYAN}ℹ  {message}{Style.RESET_ALL}")
-
-
-  @staticmethod
-  def print_warning(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.MAGENTA}⚠️ {message}{Style.RESET_ALL}")
+  def ask_user_input(message: str) -> str:
+    return input(f"{message} ('fin' pour quitter) : \n")
 
 
   @staticmethod
@@ -33,11 +24,29 @@ class MessagePrinter:
 
 
   @staticmethod
-  def ask_user_input(message: str) -> str:
-    return input(f"{message} ('fin' pour quitter) : \n")
+  def print_folder(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.GREEN}📄 {message}{Style.RESET_ALL}")
 
 
   @staticmethod
-  def ask_user_confirmation(message: str, default: bool = True) -> str:
-    options = "(O/n)" if default else "(o/N)"
-    return input (f"💬 {message} {options} : \n")
+  def print_info(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.CYAN}ℹ  {message}{Style.RESET_ALL}")
+
+  @staticmethod
+  def print_message(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.BLUE}{message}{Style.RESET_ALL}")
+
+
+  @staticmethod
+  def print_save_aborted(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.RED}❌ {message}{Style.RESET_ALL}")
+
+
+  @staticmethod
+  def print_success(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.GREEN}✅ {message}{Style.RESET_ALL}")
+
+
+  @staticmethod
+  def print_warning(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.MAGENTA}⚠️ {message}{Style.RESET_ALL}")
