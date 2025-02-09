@@ -86,15 +86,16 @@ pip install -r requirements.txt
 ```bash
 pip list
 ```
-3. Lancer l'application python
+3. **Lancer l'application**
+- Normalement:
 ```bash
 python -m app
 ```
-Sans fichiers de compilation
+- Sans fichiers de compilation:
 ```bash
 python -B -m app
 ```
-Supprression des fichiers de compilation à la fin de l'éxécution du programme
+- Avec suppression des fichiers de compilation à la fin de l'éxécution du programme
 ```bash
 python -m app; Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
 ```
