@@ -55,8 +55,8 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   │   │   ├── display_success.py
 │   │   │   ├── display_warning.py
 │   │   │   ├── display_welcome.py
+│   │   │   ├── fetch_data.py
 │   │   │   ├── file_dialog.py
-│   │   │   ├── retrieve_data.py
 │   ├── domain/
 │   │   ├── models/
 │   │   └── services/
