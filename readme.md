@@ -78,15 +78,15 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 ```
 
 ## 🚀 GETTING STARTED
-1. Installer les librairies (en local dans python)
+**1. Installer les librairies (en local dans python)**
 ```bash
 pip install -r requirements.txt
 ```
-2. Vérifier l'installation des librairies
+**2. Vérifier l'installation des librairies**
 ```bash
 pip list
 ```
-3. **Lancer l'application**
+**3. Lancer l'application**
 - Normalement:
 ```bash
 python -m app
@@ -99,7 +99,7 @@ python -B -m app
 ```bash
 python -m app; Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
 ```
-4. Effacer les fichiers de compilation
+**4. Effacer les fichiers de compilation**
 ```bash
 Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
 ```
