@@ -3,8 +3,8 @@ from src.application.use_cases.ask_url import AskUrl
 from src.application.use_cases.display_exception import DisplayException
 from src.application.use_cases.display_goodbye import DisplayGoodbye
 from src.application.use_cases.display_leave import DisplayLeave
-from src.application.use_cases.retrieve_data import RetrieveData
 from src.application.use_cases.display_welcome import DisplayWelcome
+from src.application.use_cases.fetch_data import FetchData
 from src.infrastructure.external_services.api_client import ApiClient
 from src.infrastructure.storage.save_file import SaveFile
 
@@ -19,8 +19,8 @@ class AppController:
 
       api_client = ApiClient()
       save_file = SaveFile()
-      retrieve_data = RetrieveData(api_client, save_file)
-      retrieve_data.execute(url)
+      fetch_data = FetchData(api_client, save_file)
+      fetch_data.execute(url)
 
       DisplayGoodbye.execute()
 
