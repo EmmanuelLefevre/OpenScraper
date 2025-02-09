@@ -38,6 +38,7 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   │   ├── app_controller.py
 │   ├── application/
 │   │   ├── dtos/
+│   │   │   ├── api_response_dto.py
 │   │   ├── exceptions/
 │   │   │   ├── user_exit_exception.py
 │   │   ├── services/
@@ -48,6 +49,7 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   │   │   ├── display_error.py
 │   │   │   ├── display_exception.py
 │   │   │   ├── display_goodbye.py
+│   │   │   ├── display_info.py
 │   │   │   ├── display_leave.py
 │   │   │   ├── display_success.py
 │   │   │   ├── display_warning.py
@@ -57,6 +59,9 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   ├── domain/
 │   │   ├── models/
 │   │   └── services/
+│   │   │   ├── fetch_more_data.py.py
+│   │   │   ├── data_extractor.py
+│   │   │   ├── data_formatter.py
 │   ├── infrastructure/
 │   │   └── external_services/
 │   │   │   ├── api_client.py
