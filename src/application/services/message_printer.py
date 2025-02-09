@@ -14,6 +14,11 @@ class MessagePrinter:
 
 
   @staticmethod
+  def print_backup_aborted(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.RED}❌ {message}{Style.RESET_ALL}")
+
+
+  @staticmethod
   def print_error(message: str) -> None:
     print(f"{Style.BRIGHT}{Fore.RED}💥 {message}{Style.RESET_ALL}")
 
@@ -24,13 +29,9 @@ class MessagePrinter:
 
 
   @staticmethod
-  def print_folder(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.GREEN}📄 {message}{Style.RESET_ALL}")
-
-
-  @staticmethod
   def print_info(message: str) -> None:
     print(f"{Style.BRIGHT}{Fore.CYAN}ℹ  {message}{Style.RESET_ALL}")
+
 
   @staticmethod
   def print_message(message: str) -> None:
@@ -38,8 +39,8 @@ class MessagePrinter:
 
 
   @staticmethod
-  def print_save_aborted(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.RED}❌ {message}{Style.RESET_ALL}")
+  def print_saved_file_folder(message: str) -> None:
+    print(f"{Style.BRIGHT}{Fore.GREEN}📄 {message}{Style.RESET_ALL}")
 
 
   @staticmethod
