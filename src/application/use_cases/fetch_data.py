@@ -4,7 +4,7 @@ from src.infrastructure.external_services.api_client import ApiClient
 from src.infrastructure.storage.save_file import SaveFile
 
 
-class RetrieveData:
+class FetchData:
   def __init__(self, api_client: ApiClient, save_file: SaveFile) -> None:
     self.api_client = api_client
     self.save_file = save_file
