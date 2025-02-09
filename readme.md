@@ -51,6 +51,7 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   │   │   ├── display_goodbye.py
 │   │   │   ├── display_info.py
 │   │   │   ├── display_leave.py
+│   │   │   ├── display_message.py
 │   │   │   ├── display_success.py
 │   │   │   ├── display_warning.py
 │   │   │   ├── display_welcome.py
