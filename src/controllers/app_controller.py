@@ -19,6 +19,7 @@ class AppController:
 
       api_client = ApiClient()
       save_file = SaveFile()
+
       fetch_data = FetchData(api_client, save_file)
       fetch_data.execute(url)
 
