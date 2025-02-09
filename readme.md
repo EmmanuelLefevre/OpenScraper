@@ -45,6 +45,7 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   │   │   ├── message_printer.py
 │   │   │   ├── user_input_handler.py
 │   │   ├── uses_cases/
+│   │   │   ├── ask_file_path.py
 │   │   │   ├── ask_url.py
 │   │   │   ├── display_error.py
 │   │   │   ├── display_exception.py
@@ -56,7 +57,6 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   │   │   ├── display_warning.py
 │   │   │   ├── display_welcome.py
 │   │   │   ├── fetch_data.py
-│   │   │   ├── file_dialog.py
 │   ├── domain/
 │   │   ├── models/
 │   │   └── services/
