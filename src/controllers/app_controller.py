@@ -7,6 +7,7 @@ from src.application.use_cases.display_warning import DisplayWarning
 from src.application.use_cases.retrieve_data import RetrieveData
 from src.application.use_cases.display_welcome import DisplayWelcome
 from src.infrastructure.external_services.api_client import ApiClient
+from src.infrastructure.storage.save_file import SaveFile
 
 
 class AppController:
@@ -18,7 +19,8 @@ class AppController:
       url = AskUrl.execute()
 
       api_client = ApiClient()
-      retrieve_data = RetrieveData(api_client)
+      save_file = SaveFile()
+      retrieve_data = RetrieveData(api_client, save_file)
       data = retrieve_data.execute(url)
       print(data)
 
