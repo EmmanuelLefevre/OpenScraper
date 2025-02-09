@@ -48,29 +48,22 @@ Ce projet respecte les principes de la Clean Architecture en garantissant une s�
 │   │   ├── uses_cases/
 │   │   │   ├── ask_file_path.py
 │   │   │   ├── ask_url.py
-│   │   │   ├── display_backup_aborted.py
-│   │   │   ├── display_error.py
-│   │   │   ├── display_exception.py
-│   │   │   ├── display_goodbye.py
-│   │   │   ├── display_info.py
-│   │   │   ├── display_leave.py
 │   │   │   ├── display_message.py
-│   │   │   ├── display_saved_file_folder.py
-│   │   │   ├── display_success.py
-│   │   │   ├── display_warning.py
-│   │   │   ├── display_welcome.py
 │   │   │   ├── fetch_data.py
 │   ├── domain/
 │   │   ├── models/
-│   │   └── services/
-│   │   │   ├── fetch_more_data.py.py
+│   │   ├── services/
 │   │   │   ├── data_extractor.py
 │   │   │   ├── data_formatter.py
+│   │   │   ├── fetch_more_data.py.py
 │   ├── infrastructure/
-│   │   └── external_services/
-│   │   │   ├── api_client.py
-│   │   └── storage/
-│   │   │   ├── save_file.py
+│   │   ├─── external_services/
+│   │   │    ├── api_client.py
+│   │   ├─── storage/
+│   │   │    ├── data_frame/
+│   │   │    │   ├── example_data_frame.json
+│   │   │    │   ├── example_data_frame.csv
+│   │   │    ├── save_file.py
 ├── app.py
 ├── requirements.txt
 ├── readme.md
