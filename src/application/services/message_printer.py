@@ -35,7 +35,7 @@ class MessagePrinter:
 
   @staticmethod
   def print_message(message: str) -> None:
-    print(f"{Style.BRIGHT}{Fore.BLUE}{message}{Style.RESET_ALL}")
+    print(f"{Style.NORMAL}{Fore.BLUE}{message}{Style.RESET_ALL}")
 
 
   @staticmethod
