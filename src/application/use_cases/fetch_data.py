@@ -13,8 +13,7 @@ class FetchData:
     try:
       data = self.api_client.get_data(url)
       if data:
-        filename = "output.json" if "{" in data else "output.csv"
-        self.save_file.save(data, filename)
+        self.save_file.save(data)
       return data
 
     except RuntimeError as e:
