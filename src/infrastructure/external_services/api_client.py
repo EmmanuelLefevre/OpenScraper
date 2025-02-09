@@ -1,6 +1,7 @@
 import requests
 
 from src.application.use_cases.display_exception import DisplayException
+from src.domain.services.data_extractor import DataExtractor
 from src.domain.services.data_formatter import DataFormatter
 
 
@@ -11,7 +12,10 @@ class ApiClient:
       response = requests.get(url, timeout=10)
       response.raise_for_status()
 
-      DataFormatter.detect_data_format(response)
+      data_format = DataFormatter.detect_data_format(response)
+
+      if data_format == "json":
+        return DataExtractor.extract_from_json(response.text)
 
       return response.text
 
