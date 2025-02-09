@@ -11,7 +11,9 @@ class ApiClient:
       response = requests.get(url, timeout=10)
       response.raise_for_status()
 
-      return DataFormatter.format_response(response)
+      DataFormatter.detect_data_format(response)
+
+      return response.text
 
     except requests.exceptions.RequestException as e:
       DisplayException.execute(str(e))
