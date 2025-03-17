@@ -35,7 +35,7 @@ Avec OpenScraper, l’accès aux données ouvertes devient simple, rapide et ent
 Ce projet respecte les principes de la Clean Architecture en garantissant une séparation claire des responsabilités entre les différentes couches, assurant ainsi une organisation modulaire et maintenable du code.  
 ```bash
 ├── src/
-│   ├── controllers/
+│   ├── presentation/
 │   │   ├── app_controller.py
 │   ├── application/
 │   │   ├── dtos/
