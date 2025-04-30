@@ -54,4 +54,3 @@ class BackupAbortedMessage(Message):
     self.message = message
   def display(self) -> None:
     print(f"{Style.BRIGHT}{Fore.RED}❌ {self.message}{Style.RESET_ALL}")
-    user_input = UserInput.ask_user_input("Votre message ici")
