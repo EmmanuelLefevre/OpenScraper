@@ -2,10 +2,10 @@ import json
 import pandas as pd
 import os
 import tkinter as tk
+from tkinter import filedialog
 
 from io import StringIO
 from src.application.use_cases.display_message import DisplayMessage
-from tkinter import filedialog
 
 
 class SaveFile:

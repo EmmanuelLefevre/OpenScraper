@@ -1,5 +1,5 @@
 from src.application.exceptions.user_exit_exception import UserExitException
-from src.application.services.message_printer import MessagePrinter
+from src.application.use_cases.user_input import UserInput
 from src.application.use_cases.display_message import DisplayMessage
 
 
@@ -8,7 +8,7 @@ class UserInputHandler:
   def ask_input(message: str, allow_empty: bool = False) -> str:
 
     while True:
-      user_input = MessagePrinter.ask_user_input(message).strip()
+      user_input = UserInput.ask_user_input(message).strip()
 
       if user_input.lower() == "fin":
         raise UserExitException

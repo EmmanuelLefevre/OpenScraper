@@ -1,57 +1,48 @@
-from src.application.services.message_printer import MessagePrinter
-
+from src.adapters.display_message import ConsoleMessageDisplayAdapter
 
 class DisplayMessage:
-  @staticmethod
-  def backup_aborted() -> None:
-    MessagePrinter.print_backup_aborted("Sauvegarde annulée par l'utilisateur...")
+    _adapter = ConsoleMessageDisplayAdapter()
 
+    @staticmethod
+    def backup_aborted() -> None:
+        DisplayMessage._adapter.display("Sauvegarde annulée par l'utilisateur...", "backup_aborted")
 
-  @staticmethod
-  def error(message: str) -> None:
-    MessagePrinter.print_error(message)
+    @staticmethod
+    def error(message: str) -> None:
+        DisplayMessage._adapter.display(message, "error")
 
+    @staticmethod
+    def exception(message: str) -> None:
+        DisplayMessage._adapter.display(message, "exception")
 
-  @staticmethod
-  def exception(message: str) -> None:
-    MessagePrinter.print_exception(message)
+    @staticmethod
+    def goodbye() -> None:
+        DisplayMessage._adapter.display("👋 Programme terminé.", "message")
 
+    @staticmethod
+    def info(message: str) -> None:
+        DisplayMessage._adapter.display(message, "info")
 
-  @staticmethod
-  def goodbye() -> None:
-    MessagePrinter.print_message("👋 Programme terminé.")
+    @staticmethod
+    def leave() -> None:
+        DisplayMessage._adapter.display("👋 Interruption par l'utilisateur. Programme terminé.", "message")
 
+    @staticmethod
+    def message(message: str) -> None:
+        DisplayMessage._adapter.display(message, "message")
 
-  @staticmethod
-  def info(message: str) -> None:
-    MessagePrinter.print_info(message)
+    @staticmethod
+    def saved_file_folder(message: str) -> None:
+        DisplayMessage._adapter.display(message, "saved_file")
 
+    @staticmethod
+    def success(message: str) -> None:
+        DisplayMessage._adapter.display(message, "success")
 
-  @staticmethod
-  def leave() -> None:
-    MessagePrinter.print_message("👋 Interruption par l'utilisateur. Programme terminé.")
+    @staticmethod
+    def warning(message: str) -> None:
+        DisplayMessage._adapter.display(message, "warning")
 
-
-  @staticmethod
-  def message(message: str) -> None:
-    MessagePrinter.print_message(message)
-
-
-  @staticmethod
-  def saved_file_folder(message: str) -> None:
-    MessagePrinter.print_saved_file_folder(message)
-
-
-  @staticmethod
-  def success(message: str) -> None:
-    MessagePrinter.print_success(message)
-
-
-  @staticmethod
-  def warning(message: str) -> None:
-    MessagePrinter.print_warning(message)
-
-
-  @staticmethod
-  def welcome() -> None:
-    MessagePrinter.print_message("Bienvenue dans OpenScraper 🎣")
+    @staticmethod
+    def welcome() -> None:
+        DisplayMessage._adapter.display("Bienvenue dans OpenScraper 🎣", "message")
